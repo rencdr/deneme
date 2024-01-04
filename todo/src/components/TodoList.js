@@ -20,21 +20,22 @@ const TodoList = () => {
 
   return (
     <div>
-      <h1>Todo Uygulaması</h1>
+      <h1>Todo App</h1>
       <div>
         <input
           type="text"
           value={newTodo}
           onChange={(e) => setNewTodo(e.target.value)}
-          placeholder="Yeni görev ekle"
+          placeholder="Add Task"
         />
-        <button onClick={addTodo}>Ekle</button>
+        <button onClick={addTodo}>Add</button>
       </div>
       <ul>
         {todos.map((todo, index) => (
           <li key={index}>
+            <span>{index + 1}. </span>
             {todo}
-            <button onClick={() => removeTodo(index)}>Sil</button>
+            <button onClick={() => removeTodo(index)}>Delete</button>
           </li>
         ))}
       </ul>
