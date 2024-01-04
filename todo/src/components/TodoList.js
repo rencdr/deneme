@@ -1,5 +1,6 @@
 // TodoList.js
 import React, { useState } from 'react';
+import './TodoList.css'; // Eklediğimiz CSS dosyasını içe aktarıyoruz
 
 const TodoList = () => {
   const [todos, setTodos] = useState([]);
